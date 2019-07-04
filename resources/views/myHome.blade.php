@@ -19,6 +19,7 @@
                 <div class="card border-left-primary shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
+
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
@@ -114,6 +115,15 @@
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </div>
+                        <table class="table table-bordered">
+                            @foreach ($users as $user)
+                                <tr>
+                                    <td>This is user {{ $user->id }}</td>
+                                    <td>name: {{ $user->name }}</td>
+                                    <td><button class="btn-success">Sell Item</button></td>
+                                </tr>
+                            @endforeach
+                        </table>
                     </div>
                     <!-- Card Body -->
                     <div class="card-body">
