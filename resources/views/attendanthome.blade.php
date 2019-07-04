@@ -104,23 +104,23 @@
                 <!-- Project Card Example -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Product Listings</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Orders</h6>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered table-responsive-md">
-                                <thead>
-                                    <th style="width:30%">Product</th>
-                                    <th>Quantity</th>
-                                    <th style="width:40%">Description</th>
-                                    <th style="width:15%">Action</th>
-                                </thead>
+                            <thead>
+                            <th style="width:30%">Product</th>
+                            <th>Quantity</th>
+                            <th style="width:40%">Description</th>
+                            <th style="width:15%">Action</th>
+                            </thead>
                             <tbody>
                             @foreach ($users as $user)
                                 <tr>
                                     <td>This is user {{ $user->id }}</td>
                                     <td>name: {{ $user->name }}</td>
                                     <td>bllaaaa</td>
-                                    <td><a href="#sellModal" data-toggle="modal" data-target="#sellModal" class="btn btn-success">Sell Item</a></td>
+                                    <td><a href="#sellModal" data-toggle="modal" data-target="#sellModal" class="btn btn-success">Dispatch</a></td>
                                 </tr>
                             @endforeach
                             </tbody>
@@ -139,7 +139,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Make a Sale?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Dispatch?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -163,5 +163,5 @@
             </div>
         </div>
     </div>
-<!--end sell modal-->
+    <!--end sell modal-->
 @endsection
