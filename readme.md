@@ -8,7 +8,7 @@ Languages Used
 Applicant Section
 Hosted App Link
 
-application url: https://secure-fortress-62365.herokuapp.com/
+application url: http://secure-fortress-62365.herokuapp.com/
 
 Comments
 
