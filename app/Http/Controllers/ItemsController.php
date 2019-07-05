@@ -31,19 +31,19 @@ class ItemsController extends Controller
 
         $item->save();
 
-        if($item->reorder_level == $item->quantity || $item->reorder_level < $item->quantity) {
+        if($item->reorder_level == $item->quantity || $item->reorder_level > $item->quantity) {
             $this->createReorder($item);
         }
 
-        return response()->json();
+        return response()->json($item);
     }
 
-    public function createReorder(Item $item, $quantity)
+    public function createReorder(Item $item)
     {
-        Order::create([
+        return Order::create([
             'item_id' => $item->id,
-            'quantity' => 20,
-            'status' => false
+            'quantity' => 30,
+            'status' => 0
          ]);
     }
 }

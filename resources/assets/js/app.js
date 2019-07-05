@@ -15,8 +15,11 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import store from './store/index';
+
 Vue.component('IndexPage', require('./components/index.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    store
 });

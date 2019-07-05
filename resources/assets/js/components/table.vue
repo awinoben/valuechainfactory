@@ -1,31 +1,28 @@
 <script>
     import axios from 'axios';
     import { Message } from 'element-ui';
+    import { mapGetters } from 'vuex';
 
     export default {
 
         data() {
             return {
-                items: [],
                 item: {},
                 sell: false,
                 form: {
                     quantity: 0
                 },
-
                 selling: false
             }
         },
 
-        methods: {
+        computed: {
+            ...mapGetters({
+                items: 'items'
+            })
+        },
 
-            fetchItems() {
-                axios.get('/api/items').then( ({ data }) => {
-                    this.items = data;
-                }, () => {
-                    alert("Failed to fetch");
-                });
-            },
+        methods: {
 
             sale(id) {
 
@@ -40,7 +37,8 @@
                 axios.post('/api/sell/'+this.item.id, this.form)
                     .then( ({ data }) => {
 
-                        this.fetchItems();
+                        this.$store.commit('FETCH_ITEMS');
+                        this.$store.commit('FETCH_UN_PROCESSED_ORDERS', 'unprocessed');
 
                         Message.success({ message: 'Product is successfully updated!' });
 
@@ -54,7 +52,7 @@
         },
 
         mounted() {
-            this.fetchItems();
+            this.$store.commit('FETCH_ITEMS');
         }
     }
 </script>

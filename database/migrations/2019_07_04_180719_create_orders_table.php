@@ -18,10 +18,8 @@ class CreateOrdersTable extends Migration
             $table->unsignedBigInteger('item_id');
             $table->string('description')->nullable();
             $table->integer('status')->default(0);
+            $table->float('quantity');
             $table->timestamps();
-
-            $table->foreign('item_id')->references('item_id')->on('items')->onDelete('cascade')->onUpdate('cascade');
-
         });
     }
 
