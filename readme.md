@@ -38,6 +38,6 @@ Paste your hosted application url here: http://secure-fortress-62365.herokuapp.c
 Comments
 
 Add your comments below:
-#I was not able to add 'info@valuechainfactory' as a collaborator since it is not public, I added 'valuechainfactory' instead but didn't see your response to the invitation
+#I was not able to add 'info@valuechainfactory' as a collaborator since it is not public, I added 'valuechainfactory.com' instead but didn't see your response to the invitation
 
 
