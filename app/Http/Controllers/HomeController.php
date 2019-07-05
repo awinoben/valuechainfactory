@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
-
+use App\Item;
 
 class HomeController extends Controller
 
@@ -39,10 +39,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-         $users = User::all();
-        return view('myHome', ["users"=>$users]);
-
-
+        return view('myHome');
     }
 
 
@@ -80,6 +77,23 @@ class HomeController extends Controller
     {
 
         return view('myUsers');
+
+    }
+
+    //show landing page
+    public function landing()
+
+    {
+
+        return view('landing');
+
+    }
+    //home warehouse
+    public function attendantHome()
+
+    {
+
+        return view('attendantHome');
 
     }
 

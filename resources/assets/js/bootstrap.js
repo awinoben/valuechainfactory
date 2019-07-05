@@ -1,5 +1,6 @@
 
 window._ = require('lodash');
+import Vue from 'vue';
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -51,3 +52,9 @@ if (token) {
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
+
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import locale from 'element-ui/lib/locale/lang/en';
+
+Vue.use(ElementUI, { locale });

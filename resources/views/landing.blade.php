@@ -17,6 +17,15 @@
 
     <!-- Custom styles for this template-->
     <link href="{!! asset('theme/css/sb-admin-2.min.css') !!}" rel="stylesheet">
+    <!--styles-->
+    <style>
+        .bg-login{
+            background-color: #cdd1d4;
+            background-position: center;
+            background-size: cover;
+        }
+
+    </style>
 
 </head>
 
@@ -28,12 +37,15 @@
     <div class="row justify-content-center">
 
         <div class="col-xl-10 col-lg-12 col-md-9">
-
+          <div>
+              <br><br><br><br><br>
+          </div>
             <div class="card o-hidden border-0 shadow-lg my-5">
+
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                        <div class="col-lg-6 d-none d-lg-block bg-login"></div>
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
@@ -56,11 +68,11 @@
                                         Login
                                     </a>-->
                                     <hr>
-                                    <a href="#" class="btn btn-google btn-user btn-block">
-                                        <i class="fab fa-user fa-fw"></i> Store Actor
+                                    <a href="{{ route('home') }}" class="btn btn-google btn-user btn-block">
+                                        <i class="fa fa-user fa-fw"></i> Store Actor
                                     </a>
                                     <a href="#" class="btn btn-facebook btn-user btn-block">
-                                        <i class="fab fa-user-f fa-fw"></i> Warehouse Attendant
+                                        <i class="fa fa-user fa-fw"></i> Warehouse Actor
                                     </a>
                                 </form>
                                 <!--<hr>

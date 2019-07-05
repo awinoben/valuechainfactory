@@ -23,3 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('my-home', 'HomeController@myHome');
 
 Route::get('my-users', 'HomeController@myUsers');
+
+Route::get('landing', 'HomeController@landing');
+
+Route::get('attendantHome', 'HomeController@attendantHome');

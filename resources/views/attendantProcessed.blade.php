@@ -1,8 +1,8 @@
-@extends('theme.default')
+@extends('theme.attendantmaster')
 
 
 @section('content')
-    @include('theme.header')
+    @include('theme.attendantheader')
     <div class="container-fluid">
 
         <!-- Page Heading -->
@@ -104,7 +104,7 @@
                 <!-- Project Card Example -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Orders</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Processed Orders</h6>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered table-responsive-md">
@@ -120,7 +120,6 @@
                                     <td>This is user {{ $user->id }}</td>
                                     <td>name: {{ $user->name }}</td>
                                     <td>bllaaaa</td>
-                                    <td><a href="#sellModal" data-toggle="modal" data-target="#sellModal" class="btn btn-success">Dispatch</a></td>
                                 </tr>
                             @endforeach
                             </tbody>
@@ -134,34 +133,4 @@
         </div>
 
     </div>
-    <!-- Sell Modal-->
-    <div class="modal fade" id="sellModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Dispatch?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="#" method="post">
-                        <div class="col-lg-12">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label>Quantity</label>
-                                    <input type="number" id="quantity" name="quantity" class="form-control-sm">
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="#">Sell</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end sell modal-->
 @endsection
