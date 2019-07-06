@@ -73,7 +73,7 @@
                     <td>{{ item.description }}</td>
                     <td>{{ item.quantity }}</td>
                     <td>{{ item.reorder_level }}</td>
-                    <td><el-button type="success" size="small" @click="sale(item.id)">SALE</el-button></td>
+                    <td><el-button type="success" size="small" @click="sale(item.id)">SELL</el-button></td>
                 </tr>
             </tbody>
 

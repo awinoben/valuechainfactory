@@ -18,7 +18,7 @@
     <div class="container-fluid">
 
         <el-tabs>
-            <el-tab-pane label="PRODUCT TABLE">
+           <!-- <el-tab-pane label="PRODUCT TABLE">
                 <div class="row">
 
                     <div class="col-lg-12 mb-4">
@@ -32,9 +32,9 @@
 
                     </div>
                 </div>
-            </el-tab-pane>
+            </el-tab-pane>-->
 
-            <el-tab-pane label="PROCESSED REORDERS">
+            <el-tab-pane label="PROCESSED ORDERS">
 
                 <div class="row">
 
@@ -51,7 +51,7 @@
 
             </el-tab-pane>
 
-            <el-tab-pane label="UNPROCESSED REORDERS">
+            <el-tab-pane label="UNPROCESSED ORDERS">
 
                 <div class="row">
 

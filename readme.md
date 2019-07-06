@@ -1,51 +1,43 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+Simple Reorder Module
+Scenario
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Kefis is a simple store that deals in FMCG. They desire a simple application that tracks inventory and makes automated reorders to their off-site warehouse when the stock level hits a predefined quantity. The warehouse attendant can see all reorders coming in and dispatch them to the store. Processed reorders are marked as such. Both the retailer and the warehouse can see pending and processed reorders.
+Requirements
 
-## About Laravel
+Hint: In addition to other technical areas of interest, we are very keen on your thought process. Feel free to be creative. Do not complicate your solution in a bid to impress only to find it unfinished in the stipulated period. You are allowed a maximum of 72 Hours to complete. The last commit created in that time is what we take into account.
+Client Requirements
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+    Seed 5 test products into the database with a default amount of inventory and reorder level
+    In the product listing for the store, add a button that reduces inventory to simulate a sale
+    When inventory hits the predefined reorder level, create an automated reorder in an unprocessed state
+    The warehouse actor should have a view to see unprocessed reorders
+    On the reorder listing for the warehouse, have a dispatch button that simulates a dispatch to the store
+    The above dispatch action should increment inventory in the store
+    The store actor should also have a view to see unprocessed and processed reorders
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Technical Requirements
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+    The buttons should not trigger a page refresh. (hint: Javascript, in whatever from, will come in handy here)
+    Write at least one unit test for each of the functions that simulate the sale and the dispatch
+    Provide the command necessary to run your tests
+    Create a private repository on GitHub and add info@valuechainfactory.com as a colaborator
+    Push your code to that repoitory in as many commits as neccessary - preferably more than one.
+    Host the solution on Heroku or an alternative hosting provider and share the link in the section below.
 
-## Learning Laravel
+Languages Used
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+PHP laravel
+vue.js
+sqlite
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+Applicant Section
+Hosted App Link
 
-## Laravel Sponsors
+Paste your hosted application url here: http://secure-fortress-62365.herokuapp.com/
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+Comments
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
+Add your comments below:
+#I was not able to add 'info@valuechainfactory.com' as a collaborator since it is not public, I added 'valuechainfactory.com' instead but didn't see your response to the invitation
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).

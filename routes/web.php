@@ -24,6 +24,6 @@ Route::get('my-home', 'HomeController@myHome');
 
 Route::get('my-users', 'HomeController@myUsers');
 
-Route::get('landing', 'HomeController@landing');
+Route::get('/landing', 'HomeController@landing')->name('landing');
 
-Route::get('attendantHome', 'HomeController@attendantHome');
+Route::get('warehouse', 'HomeController@warehouse');

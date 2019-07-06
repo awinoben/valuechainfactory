@@ -1,9 +1,9 @@
-@extends('theme.default')
+@extends('theme.attendantmaster')
 
 
 @section('content')
 
-    @include('theme.header')
+    @include('theme.attendantheader')
 
     <div id="app">
         <index-page></index-page>

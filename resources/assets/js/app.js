@@ -16,10 +16,15 @@ window.Vue = require('vue');
  */
 
 import store from './store/index';
+import warehouse from  './components/warehouse.vue';
 
 Vue.component('IndexPage', require('./components/index.vue'));
 
 const app = new Vue({
     el: '#app',
-    store
+    store,
+    components: { warehouse }
 });
+
+
+

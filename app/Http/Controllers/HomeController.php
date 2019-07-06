@@ -89,11 +89,11 @@ class HomeController extends Controller
 
     }
     //home warehouse
-    public function attendantHome()
+    public function warehouse()
 
     {
 
-        return view('attendantHome');
+        return view('warehouse');
 
     }
 
