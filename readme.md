@@ -33,15 +33,13 @@ sqlite
 Applicant Section
 Hosted App Link
 
-Paste your hosted application url here: http://secure-fortress-62365.herokuapp.com/
+application url here: http://secure-fortress-62365.herokuapp.com/
 
-Comments
 
-Add your comments below:
-<<<<<<< HEAD
-#I was not able to add 'info@valuechainfactory.com' as a collaborator since it is not public, I added 'valuechainfactory.com' instead but didn't see your response to the invitation
-=======
-#I was not able to add 'info@valuechainfactory' as a collaborator since it is not public, I added 'valuechainfactory.com' instead but didn't see your response to the invitation
->>>>>>> 3e814fba1a826be15124184a84c0da97e1b6e00c
+Comments:
+I was not able to add 'info@valuechainfactory.com' as a collaborator since it is not public, I added 'valuechainfactory.com' instead but didn't see your response to the invitation
+
+Test command: 
+$ ./vendor/bin/phpunit
 
 
