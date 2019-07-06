@@ -6,6 +6,9 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
+use App\Item;
+use App\Order;
+
 
 class SaleButtonTest extends TestCase
 {
@@ -21,20 +24,37 @@ class SaleButtonTest extends TestCase
 
     //We will check to ensure that the response object contains a success HTTP status code 200 Ok.
 
-    public function testMakeSale()
+    public function index()
     {
-        $data = [
-            'item_id' => "1",
-            'quantity' => 20,
+        $items = Item::all();
 
-        ];
+        return response()->json($items);
+    }
+//checking if the button is subtracting quantity from products
+    public function store($id)
+    {
+        $item = Item::find($id);
 
-        $order = factory(\App\Order::class)->create();
-        $response = $this->actingAs($order, 'api')->json('POST', '/api/orders',$data);
-        $response->assertStatus(200);
-        $response->assertJson(['status' => true]);
-        $response->assertJson(['message' => "Product Sold Successfully!"]);
-        $response->assertJson(['data' => $data]);
+        $quantity = request()->get('quantity');
+
+        $item->quantity = $item->quantity - $quantity;
+
+        $item->save();
+
+        if($item->reorder_level == $item->quantity || $item->reorder_level > $item->quantity) {
+            $this->createReorder($item);
+        }
+
+        return response()->json($item);
+    }
+//checking if the button updates orders table
+    public function createReorder(Item $item)
+    {
+        return Order::create([
+            'item_id' => $item->id,
+            'quantity' => 30,
+            'status' => 0
+        ]);
     }
 
 }

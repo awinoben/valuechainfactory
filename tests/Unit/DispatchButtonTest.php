@@ -6,6 +6,9 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
+
+use App\Order;
+
 class DispatchButtonTest extends TestCase
 {
     /**
@@ -21,20 +24,24 @@ class DispatchButtonTest extends TestCase
 
     //We will check to ensure that the response object contains a success HTTP status code 200 Ok.
 
-    public function testDispatchProduct()
+    public function dispatch($id)
     {
-        $data = [
-            'item_id' => 1,
-            'quantity' => 20,
-            'status'=> 1,
+        $order = Order::find($id);
 
-        ];
+        $order->update([
+            'status' => 1
+        ]);
 
-        $order = factory(\App\Order::class)->create();
-        $response = $this->actingAs($order, 'api')->json('POST', '/api/items',$data);
-        $response->assertStatus(200);
-        $response->assertJson(['status' => true]);
-        $response->assertJson(['message' => "Product dispatched Successfully!"]);
-        $response->assertJson(['data' => $data]);
+        $item = $order->product;
+
+        $item->quantity = $item->quantity + $order->quantity;
+
+        $item->save();
+
+        $item->assertStatus(200);
+        $item->assertJson(['status' => true]);
+        $item->assertJson(['message' => "Product Sold Successfully!"]);
+        $item->assertJson(['data' => $order]);
+
     }
 }
