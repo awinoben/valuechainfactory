@@ -19,11 +19,11 @@ import store from './store/index';
 import warehouse from  './components/warehouse.vue';
 
 Vue.component('IndexPage', require('./components/index.vue'));
+Vue.component('WarehousePage', require('./components/warehouse.vue'));
 
 const app = new Vue({
     el: '#app',
     store,
-    components: { warehouse }
 });
 
 

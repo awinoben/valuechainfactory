@@ -6,7 +6,7 @@
     @include('theme.header')
 
     <div id="app">
-        <index-page></index-page>
+        <warehouse-page></warehouse-page>
     </div>
 
 @endsection

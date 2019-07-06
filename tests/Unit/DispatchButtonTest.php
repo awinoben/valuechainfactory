@@ -18,20 +18,6 @@ class DispatchButtonTest extends TestCase
         $this->assertTrue(true);
     }
 
-    //testing whether a user who is not logged in can dispatch products
-    public function testDispatchWithMiddleware()
-    {
-        $data = [
-            'item_id' => 1,
-            'quantity' => 20,
-            'status'=> 1,
-
-        ];
-
-        $response = $this->json('POST', '/api/items',$data);
-        $response->assertStatus(401);
-        $response->assertJson(['message' => "Unauthenticated."]);
-    }
 
     //We will check to ensure that the response object contains a success HTTP status code 200 Ok.
 

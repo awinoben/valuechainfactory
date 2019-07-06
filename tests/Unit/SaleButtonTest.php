@@ -6,6 +6,7 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
+
 class SaleButtonTest extends TestCase
 {
     /**
@@ -16,20 +17,6 @@ class SaleButtonTest extends TestCase
     public function testExample()
     {
         $this->assertTrue(true);
-    }
-
-    //testing whether a user who is not logged in can simulate a sale
-    public function testSimulateSaleWithMiddleware()
-    {
-        $data = [
-            'item_id' => "1",
-            'quantity' => 20,
-
-        ];
-
-        $response = $this->json('POST', '/api/orders',$data);
-        $response->assertStatus(401);
-        $response->assertJson(['message' => "Unauthenticated."]);
     }
 
     //We will check to ensure that the response object contains a success HTTP status code 200 Ok.
